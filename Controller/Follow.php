@@ -5,7 +5,6 @@ try {
     require "../config/config.php";
     $user = \Models\User::where(['id', '=', $_POST['target_user_id']])->first();
     $resultFollow = $user->toggleFollow($_POST['user_id']);
-    error_log(var_export($resultFollow, 1));
     echo json_encode(['result' => match ($resultFollow) {
         0, '0', false => 'ارسال شد',
         1, '1', true => 'دنبال شد',
