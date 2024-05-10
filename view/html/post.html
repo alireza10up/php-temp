@@ -1,0 +1,909 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+<!-- ==============================================
+    Title and Meta Tags
+    =============================================== -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>شبکه اجتماعی</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta property="og:title" content="" />
+<meta property="og:url" content="" />
+<meta property="og:description" content="" />
+
+<!-- ==============================================
+    Favicons
+    =============================================== -->
+<link rel="icon" href="../assets/img/logo.html">
+<link rel="apple-touch-icon" href="../img/favicons/apple-touch-icon.html">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/favicons/apple-touch-icon-72x72.html">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/favicons/apple-touch-icon-114x114.html">
+
+<!-- ==============================================
+    CSS
+    =============================================== -->
+<link type="text/css" href="../assets/css/demos/photo.css" rel="stylesheet" /></head>
+<body>
+    <!-- ==============================================
+     Navigation Section
+     =============================================== -->
+    <header class="tr-header">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><i class="fab fa-instagram"></i> </a>
+            </div>
+            <!-- /.navbar-header -->
+            <div class="navbar-left" style="display:none">
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a><span>تنظیمات</span></a></li>
+                        <li><a href="Control.logout.php">خروج</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /.navbar-left -->
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <div class="search-dashboard">
+                            <form method="GET" action="Control.search.php">
+                                <input name="text" placeholder="جستجو کنید" type="text">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                    </li>
+
+                    <li class="dropdown notification-list">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">
+                            <span class="badge badge-danger badge-pill noti-icon-badge">6</span>
+                            <i class="fa fa-bell noti-icon"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-lg">
+
+                            <div class="dropdown-item noti-title">
+                                <h6 class="m-0">
+                                    <span class="pull-right">
+                                        <a class="text-dark"><small> پاک کردن  </small></a> 
+                                    </span> اعلان ها 
+                                </h6>
+                            </div>
+
+                            <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 416.983px;">
+                                <div class="slimscroll" style="max-height: 230px; overflow: hidden; width: auto; height: 416.983px;">
+                                    <div id="Slim">
+                                                                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                                <div class="notify-icon"  style="background-color:red"><i class="fa fa-heart"></i></div>
+                                                <p class="notify-details">مجتبی ملک فر پست شما را لایک کرد. <small class="text-muted">2  دقیقه قبل</small></p>
+                                            </a>
+                                                                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                                <div class="notify-icon"  style="background-color:red"><i class="fa fa-heart"></i></div>
+                                                <p class="notify-details">مجتبی ملک فر پست شما را لایک کرد. <small class="text-muted">58  دقیقه قبل</small></p>
+                                            </a>
+                                                                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                                <div class="notify-icon"  style="background-color:red"><i class="fa fa-heart"></i></div>
+                                                <p class="notify-details">مجتبی ملک فر پست شما را لایک کرد. <small class="text-muted">56  دقیقه قبل</small></p>
+                                            </a>
+                                                                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                                <div class="notify-icon"  style="background-color:red"><i class="fa fa-heart"></i></div>
+                                                <p class="notify-details">مجتبی ملک فر پست شما را لایک کرد. <small class="text-muted">55  دقیقه قبل</small></p>
+                                            </a>
+                                                                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                                <div class="notify-icon"  style="background-color:red"><i class="fa fa-heart"></i></div>
+                                                <p class="notify-details">مجتبی ملک فر پست شما را لایک کرد. <small class="text-muted">55  دقیقه قبل</small></p>
+                                            </a>
+                                                                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                                <div class="notify-icon"  style="background-color:red"><i class="fa fa-comment"></i></div>
+                                                <p class="notify-details">مجتبی ملک فر برای پست شما کامنت نوشت. <small class="text-muted">25  دقیقه قبل</small></p>
+                                            </a>
+                                                                            </div>
+                                    <!--/ .Slim-->
+                                    <div class="slimScrollBar" style="background: rgb(158, 165, 171) none repeat scroll 0% 0%; width: 8px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px;"></div>
+                                    <div class="slimScrollRail" style="width: 8px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51) none repeat scroll 0% 0%; opacity: 0.2; z-index: 90; right: 1px;"></div>
+                                </div>
+                                <!--/ .slimscroll-->
+                            </div>
+                            <!--/ .slimScrollDiv-->
+                            <a href="notification" class="dropdown-item text-center notify-all">
+                            نمایش همه<i class="fa fa-arrow-left"></i>
+                            </a>
+                            <!-- All-->
+                        </div>
+                        <!--/ dropdown-menu-->
+                    </li>
+
+                    <li class="dropdown notification-list">
+                        <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">
+                            <span class="badge badge-success badge-pill noti-icon-badge">6</span>
+                            <i class="fa fa-envelope noti-icon"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-lg dropdown-new">
+                            <div class="dropdown-item noti-title">
+                                <h6 class="m-0">
+                                <span class="float-right">
+                                    <a class="text-dark"><small> پاک کردن </small></a> 
+                                </span>گفتگوها
+                                </h6>
+                            </div>
+
+                            <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 416.983px;">
+                                <div class="slimscroll" style="max-height: 230px; overflow: hidden; width: auto; height: 416.983px;">
+                                    <div id="Slim2">
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item nav-user">
+                                            <div class="notify-icon"><img src="view/assets/img/users/1.jpg" class="img-responsive img-circle" alt=""> </div>
+                                            <p class="notify-details">Cristina Pride</p>
+                                            <p class="text-muted font-13 mb-0 user-msg">Hi, How are you? What about our next meeting</p>
+                                        </a>
+                                        <!--/ dropdown-item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item nav-user">
+                                            <div class="notify-icon"><img src="view/assets/img/users/2.jpg" class="img-responsive img-circle" alt=""> </div>
+                                            <p class="notify-details">Sam Garret</p>
+                                            <p class="text-muted font-13 mb-0 user-msg">Yeah everything is fine</p>
+                                        </a>
+                                        <!--/ dropdown-item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item nav-user">
+                                            <div class="notify-icon"><img src="view/assets/img/users/3.jpg" class="img-responsive img-circle" alt=""> </div>
+                                            <p class="notify-details">Karen Robinson</p>
+                                            <p class="text-muted font-13 mb-0 user-msg">Wow that's great</p>
+                                        </a>
+                                        <!--/ dropdown-item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item nav-user">
+                                            <div class="notify-icon"><img src="view/assets/img/users/4.jpg" class="img-responsive img-circle" alt=""> </div>
+                                            <p class="notify-details">Sherry Marshall</p>
+                                            <p class="text-muted font-13 mb-0 user-msg">Hi, How are you? What about our next meeting</p>
+                                        </a>
+                                        <!--/ dropdown-item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item nav-user">
+                                            <div class="notify-icon"><img src="view/assets/img/users/5.jpg" class="img-responsive img-circle" alt=""> </div>
+                                            <p class="notify-details">Shawn Millard</p>
+                                            <p class="text-muted font-13 mb-0 user-msg">Yeah everything is fine</p>
+                                        </a>
+                                        <!--/ dropdown-item-->
+                                    </div>
+                                    <!--/ .Slim-->
+                                    <div class="slimScrollBar" style="background: rgb(158, 165, 171) none repeat scroll 0% 0%; width: 8px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px;"></div>
+                                    <div class="slimScrollRail" style="width: 8px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51) none repeat scroll 0% 0%; opacity: 0.2; z-index: 90; right: 1px;"></div>
+                                </div>
+                                <!--/ slimscroll-->
+                            </div>
+                            <!--/ slimScrollDiv-->
+                            <a href="photo_chat.html" class="dropdown-item text-center notify-all">
+                            نمایش همه<i class="fa fa-arrow-left"></i>
+                            </a>
+                        </div>
+                        <!--/ dropdown-menu-->
+                    </li>
+
+                    <li class="dropdown mega-avatar">
+                        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" href="profile">
+                            <span class="avatar w-32"><img src="../uploads/images/users/0.057052001555682879.JPG" class="img-resonsive img-circle" width="25" height="25" alt="..."></span>
+                            <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                            <span class="hidden-xs">مجتبی ملک فر</span>
+                        </a>
+                        <div class="dropdown-menu w dropdown-menu-scale pull-right">
+                            <a class="dropdown-item" href="setting"><span>تنظیمات</span></a>
+                            <a class="dropdown-item" href="Control.logout.php"><span>خروج</span></a>
+                        </div>
+                    </li>
+                    <!-- /navbar-item -->
+
+                </ul>
+                <!-- /.sign-in -->
+            </div>
+            <!-- /.nav-right -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- /.navbar -->
+</header>    <!-- Page Header -->
+    <!-- ==============================================
+	 Navbar Second Section
+	 =============================================== -->
+    <section class="nav-sec">
+	<div class="d-flex justify-content-between">
+		<div class="p-2 nav-icon-lg dark-black">
+			<a class="nav-icon" href='../../index.php'><em class="fa fa-align-left"></em>
+				<span>صفحه اصلی</span>
+			</a>
+		</div>
+		<div class="p-2 nav-icon-lg clean-black">
+			<a class="nav-icon" href='Control.search.php?text='><em class="fa fa-crosshairs"></em>
+				<span>جستجو</span>
+			</a>
+		</div>
+		<div class="p-2 nav-icon-lg dark-black">
+			<a class="nav-icon" href='post.php'><em class="fab fa-instagram"></em>
+				<span>پست جدید</span>
+			</a>
+		</div>
+		<div class="p-2 nav-icon-lg dark-black">
+			<a class="nav-icon" href='../../profile.php?username=malekfar'><em class="fa fa-user"></em>
+				<span>پروفایل</span>
+			</a>
+		</div>
+	</div>
+</section>    <!-- ==============================================
+	 News Feed Section
+	 =============================================== -->
+    <section class="upload">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="box">
+                        <form method="POST" action="Control.post.php" id="postform" enctype="multipart/form-data">
+                            <textarea name="description" class="form-control no-border" rows="3" placeholder="چیزی بنویسید ..."></textarea>
+                            <input id="file" type="file" name="file" accept="" style="display:none" required>
+                        </form>
+                        <div class="box-footer clearfix">
+                            <button class="kafe-btn kafe-btn-mint-small pull-right btn-sm" form="postform">بارگذاری</button>
+                            <ul class="nav nav-pills nav-sm pull-left">
+                                <li class="nav-item camera"><a class="nav-link"><i class="fa fa-camera text-muted"></i></a></li>
+                                <li class="nav-item video"><a class="nav-link"><i class="fa fa-video text-muted"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="owl-carousel">
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#1977').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-1977">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="1977" value="1">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post0" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post0"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 1</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#aden').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-aden">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="aden" value="2">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post1" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post1"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 2</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#amaro').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-amaro">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="amaro" value="3">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post2" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post2"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 3</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#ashby').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-ashby">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="ashby" value="4">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post3" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post3"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 4</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#brannan').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-brannan">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="brannan" value="5">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post4" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post4"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 5</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#brooklyn').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-brooklyn">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="brooklyn" value="6">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post5" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post5"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 6</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#charmes').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-charmes">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="charmes" value="7">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post6" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post6"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 7</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#clarendon').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-clarendon">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="clarendon" value="8">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post7" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post7"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 8</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#crema').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-crema">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="crema" value="9">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post8" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post8"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 9</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#dogpatch').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-dogpatch">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="dogpatch" value="10">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post9" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post9"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 10</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#earlybird').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-earlybird">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="earlybird" value="11">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post10" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post10"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 11</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#gingham').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-gingham">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="gingham" value="12">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post11" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post11"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 12</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#ginza').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-ginza">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="ginza" value="13">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post12" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post12"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 13</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#hefe').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-hefe">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="hefe" value="14">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post13" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post13"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 14</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#helena').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-helena">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="helena" value="15">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post14" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post14"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 15</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#hudson').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-hudson">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="hudson" value="16">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post15" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post15"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 16</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#inkwell').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-inkwell">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="inkwell" value="17">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post16" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post16"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 17</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#kelvin').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-kelvin">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="kelvin" value="18">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post17" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post17"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 18</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#juno').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-juno">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="juno" value="19">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post18" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post18"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 19</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#lark').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-lark">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="lark" value="20">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post19" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post19"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 20</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#lofi').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-lofi">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="lofi" value="21">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post20" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post20"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 21</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#ludwig').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-ludwig">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="ludwig" value="22">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post21" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post21"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 22</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#maven').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-maven">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="maven" value="23">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post22" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post22"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 23</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#mayfair').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-mayfair">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="mayfair" value="24">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post23" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post23"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 24</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#moon').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-moon">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="moon" value="25">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post24" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post24"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 25</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#nashville').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-nashville">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="nashville" value="26">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post25" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post25"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 26</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#perpetua').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-perpetua">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="perpetua" value="27">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post26" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post26"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 27</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#poprocket').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-poprocket">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="poprocket" value="28">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post27" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post27"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 28</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#reyes').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-reyes">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="reyes" value="29">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post28" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post28"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 29</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#rise').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-rise">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="rise" value="30">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post29" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post29"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 30</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#sierra').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-sierra">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="sierra" value="31">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post30" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post30"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 31</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#skyline').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-skyline">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="skyline" value="32">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post31" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post31"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 32</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#slumber').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-slumber">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="slumber" value="33">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post32" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post32"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 33</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#stinson').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-stinson">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="stinson" value="34">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post33" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post33"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 34</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#sutro').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-sutro">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="sutro" value="35">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post34" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post34"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 35</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#toaster').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-toaster">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="toaster" value="36">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post35" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post35"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 36</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#valencia').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-valencia">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="valencia" value="37">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post36" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post36"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 37</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#vesper').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-vesper">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="vesper" value="38">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post37" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post37"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 38</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#walden').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-walden">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="walden" value="39">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post38" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post38"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 39</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#willow').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-willow">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="willow" value="40">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post39" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post39"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 40</span>
+                            </div>
+                        </div>
+                    </div>
+                                    <div style="margin-bottom:20px;cursor:pointer" onclick="$('#xpro-ii').prop('checked', true)">
+                        <div class="card">
+                            <div class="card-image filter-xpro-ii">
+                                <label class="custom-input">
+                                    <input type="radio" name="filter_id" form="postform" id="xpro-ii" value="41">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <video width="277" class="video-post  video-post40" type="video/mp4" autoplay muted></video>
+                                <img data-src=""  class="img-responsive image-post owl-lazy image-post40"/>
+                            </div>
+                            <div class="card-header">
+                                <span>فیلتر شماره 41</span>
+                            </div>
+                        </div>
+                    </div>
+                            </div>
+            <!--/ row-->
+        </div>
+        <!--/ container -->
+    </section>
+    <!--/ newsfeed -->
+
+    <!-- ==============================================
+	 Scripts
+	 =============================================== -->
+    <script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/plugins/slimscroll/jquery.slimscroll.js"></script>
+<script src="../assets/plugins/carousel/js/owl.carousel.js"></script>
+<script src="../assets/js/base.js"></script>
+<script>
+    $('#Slim,#Slim2').slimScroll({
+        height: "auto",
+        position: 'right',
+        railVisible: true,
+        alwaysVisible: true,
+        size: "8px",
+    });
+    $(document).ready( () => {
+        var pageName = "post.php";
+        $(".nav-sec .d-flex .p-2 a[href='"+pageName+"']").parent().addClass("mint-green");
+    });
+</script>    <script>
+        $(".camera").click(() => {
+            $('#file').attr("accept", "image/JPEG,image/BMP,image/JPG,image/PNG");
+            $('#file').click();
+        });
+    </script>
+</body>
+</html>

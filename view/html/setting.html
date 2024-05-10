@@ -1,0 +1,381 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+<!-- ==============================================
+    Title and Meta Tags
+    =============================================== -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>شبکه اجتماعی</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta property="og:title" content="" />
+<meta property="og:url" content="" />
+<meta property="og:description" content="" />
+
+<!-- ==============================================
+    Favicons
+    =============================================== -->
+<link rel="icon" href="../assets/img/logo.html">
+<link rel="apple-touch-icon" href="../img/favicons/apple-touch-icon.html">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/favicons/apple-touch-icon-72x72.html">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/favicons/apple-touch-icon-114x114.html">
+
+<!-- ==============================================
+    CSS
+    =============================================== -->
+<link type="text/css" href="../assets/css/demos/photo.css" rel="stylesheet" />    <style>
+    .content-box *{
+        margin-bottom: 20px;
+    }
+    .img-fluid{
+        width: 150px;
+        height:150px
+    }
+    </style>
+</head>
+<body>
+    <!-- ==============================================
+     Navigation Section
+     =============================================== -->
+    <header class="tr-header">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><i class="fab fa-instagram"></i> </a>
+            </div>
+            <!-- /.navbar-header -->
+            <div class="navbar-left" style="display:none">
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a><span>تنظیمات</span></a></li>
+                        <li><a href="Control.logout.php">خروج</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /.navbar-left -->
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <div class="search-dashboard">
+                            <form method="GET" action="Control.search.php">
+                                <input name="text" placeholder="جستجو کنید" type="text">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                    </li>
+
+                    <li class="dropdown notification-list">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">
+                            <span class="badge badge-danger badge-pill noti-icon-badge">6</span>
+                            <i class="fa fa-bell noti-icon"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-lg">
+
+                            <div class="dropdown-item noti-title">
+                                <h6 class="m-0">
+                                    <span class="pull-right">
+                                        <a class="text-dark"><small> پاک کردن  </small></a> 
+                                    </span> اعلان ها 
+                                </h6>
+                            </div>
+
+                            <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 416.983px;">
+                                <div class="slimscroll" style="max-height: 230px; overflow: hidden; width: auto; height: 416.983px;">
+                                    <div id="Slim">
+                                                                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                                <div class="notify-icon"  style="background-color:red"><i class="fa fa-heart"></i></div>
+                                                <p class="notify-details">مجتبی ملک فر پست شما را لایک کرد. <small class="text-muted">6  دقیقه قبل</small></p>
+                                            </a>
+                                                                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                                <div class="notify-icon"  style="background-color:red"><i class="fa fa-heart"></i></div>
+                                                <p class="notify-details">مجتبی ملک فر پست شما را لایک کرد. <small class="text-muted">3  دقیقه قبل</small></p>
+                                            </a>
+                                                                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                                <div class="notify-icon"  style="background-color:red"><i class="fa fa-heart"></i></div>
+                                                <p class="notify-details">مجتبی ملک فر پست شما را لایک کرد. <small class="text-muted">0  دقیقه قبل</small></p>
+                                            </a>
+                                                                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                                <div class="notify-icon"  style="background-color:red"><i class="fa fa-heart"></i></div>
+                                                <p class="notify-details">مجتبی ملک فر پست شما را لایک کرد. <small class="text-muted">59  دقیقه قبل</small></p>
+                                            </a>
+                                                                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                                <div class="notify-icon"  style="background-color:red"><i class="fa fa-heart"></i></div>
+                                                <p class="notify-details">مجتبی ملک فر پست شما را لایک کرد. <small class="text-muted">59  دقیقه قبل</small></p>
+                                            </a>
+                                                                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                                <div class="notify-icon"  style="background-color:red"><i class="fa fa-comment"></i></div>
+                                                <p class="notify-details">مجتبی ملک فر برای پست شما کامنت نوشت. <small class="text-muted">29  دقیقه قبل</small></p>
+                                            </a>
+                                                                            </div>
+                                    <!--/ .Slim-->
+                                    <div class="slimScrollBar" style="background: rgb(158, 165, 171) none repeat scroll 0% 0%; width: 8px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px;"></div>
+                                    <div class="slimScrollRail" style="width: 8px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51) none repeat scroll 0% 0%; opacity: 0.2; z-index: 90; right: 1px;"></div>
+                                </div>
+                                <!--/ .slimscroll-->
+                            </div>
+                            <!--/ .slimScrollDiv-->
+                            <a href="notification" class="dropdown-item text-center notify-all">
+                            نمایش همه<i class="fa fa-arrow-left"></i>
+                            </a>
+                            <!-- All-->
+                        </div>
+                        <!--/ dropdown-menu-->
+                    </li>
+
+                    <li class="dropdown notification-list">
+                        <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">
+                            <span class="badge badge-success badge-pill noti-icon-badge">6</span>
+                            <i class="fa fa-envelope noti-icon"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-lg dropdown-new">
+                            <div class="dropdown-item noti-title">
+                                <h6 class="m-0">
+                                <span class="float-right">
+                                    <a class="text-dark"><small> پاک کردن </small></a> 
+                                </span>گفتگوها
+                                </h6>
+                            </div>
+
+                            <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 416.983px;">
+                                <div class="slimscroll" style="max-height: 230px; overflow: hidden; width: auto; height: 416.983px;">
+                                    <div id="Slim2">
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item nav-user">
+                                            <div class="notify-icon"><img src="view/assets/img/users/1.jpg" class="img-responsive img-circle" alt=""> </div>
+                                            <p class="notify-details">Cristina Pride</p>
+                                            <p class="text-muted font-13 mb-0 user-msg">Hi, How are you? What about our next meeting</p>
+                                        </a>
+                                        <!--/ dropdown-item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item nav-user">
+                                            <div class="notify-icon"><img src="view/assets/img/users/2.jpg" class="img-responsive img-circle" alt=""> </div>
+                                            <p class="notify-details">Sam Garret</p>
+                                            <p class="text-muted font-13 mb-0 user-msg">Yeah everything is fine</p>
+                                        </a>
+                                        <!--/ dropdown-item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item nav-user">
+                                            <div class="notify-icon"><img src="view/assets/img/users/3.jpg" class="img-responsive img-circle" alt=""> </div>
+                                            <p class="notify-details">Karen Robinson</p>
+                                            <p class="text-muted font-13 mb-0 user-msg">Wow that's great</p>
+                                        </a>
+                                        <!--/ dropdown-item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item nav-user">
+                                            <div class="notify-icon"><img src="view/assets/img/users/4.jpg" class="img-responsive img-circle" alt=""> </div>
+                                            <p class="notify-details">Sherry Marshall</p>
+                                            <p class="text-muted font-13 mb-0 user-msg">Hi, How are you? What about our next meeting</p>
+                                        </a>
+                                        <!--/ dropdown-item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item nav-user">
+                                            <div class="notify-icon"><img src="view/assets/img/users/5.jpg" class="img-responsive img-circle" alt=""> </div>
+                                            <p class="notify-details">Shawn Millard</p>
+                                            <p class="text-muted font-13 mb-0 user-msg">Yeah everything is fine</p>
+                                        </a>
+                                        <!--/ dropdown-item-->
+                                    </div>
+                                    <!--/ .Slim-->
+                                    <div class="slimScrollBar" style="background: rgb(158, 165, 171) none repeat scroll 0% 0%; width: 8px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px;"></div>
+                                    <div class="slimScrollRail" style="width: 8px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51) none repeat scroll 0% 0%; opacity: 0.2; z-index: 90; right: 1px;"></div>
+                                </div>
+                                <!--/ slimscroll-->
+                            </div>
+                            <!--/ slimScrollDiv-->
+                            <a href="photo_chat.html" class="dropdown-item text-center notify-all">
+                            نمایش همه<i class="fa fa-arrow-left"></i>
+                            </a>
+                        </div>
+                        <!--/ dropdown-menu-->
+                    </li>
+
+                    <li class="dropdown mega-avatar">
+                        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" href="profile">
+                            <span class="avatar w-32"><img src="../uploads/images/users/0.057052001555682879.JPG" class="img-resonsive img-circle" width="25" height="25" alt="..."></span>
+                            <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                            <span class="hidden-xs">مجتبی ملک فر</span>
+                        </a>
+                        <div class="dropdown-menu w dropdown-menu-scale pull-right">
+                            <a class="dropdown-item" href="setting"><span>تنظیمات</span></a>
+                            <a class="dropdown-item" href="Control.logout.php"><span>خروج</span></a>
+                        </div>
+                    </li>
+                    <!-- /navbar-item -->
+
+                </ul>
+                <!-- /.sign-in -->
+            </div>
+            <!-- /.nav-right -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- /.navbar -->
+</header>    <!-- Page Header -->
+    <!-- ==============================================
+	 Navbar Second Section
+	 =============================================== -->
+    <section class="nav-sec">
+	<div class="d-flex justify-content-between">
+		<div class="p-2 nav-icon-lg dark-black">
+			<a class="nav-icon" href='../../index.php'><em class="fa fa-align-left"></em>
+				<span>صفحه اصلی</span>
+			</a>
+		</div>
+		<div class="p-2 nav-icon-lg clean-black">
+			<a class="nav-icon" href='Control.search.php?text='><em class="fa fa-crosshairs"></em>
+				<span>جستجو</span>
+			</a>
+		</div>
+		<div class="p-2 nav-icon-lg dark-black">
+			<a class="nav-icon" href='post.php'><em class="fab fa-instagram"></em>
+				<span>پست جدید</span>
+			</a>
+		</div>
+		<div class="p-2 nav-icon-lg dark-black">
+			<a class="nav-icon" href='../../profile.php?username=malekfar'><em class="fa fa-user"></em>
+				<span>پروفایل</span>
+			</a>
+		</div>
+	</div>
+</section>    <!-- ==============================================
+	 News Feed Section
+	 =============================================== -->
+    <section class="upload">
+        <div class="container">
+            <section class="profile">
+                <div class="container-fluid">
+                    <div class="row">
+
+                        <div class="col-lg-12">
+                            <div class="profilebox-large hidden-xs hidden-sm">
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--/ row-->
+                </div>
+                <!--/ container -->
+            </section>
+            <!-- ==============================================
+            User Profile Section
+            =============================================== -->
+                        <section class="details">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="details-box row">
+                                <div class="up-picture d-box col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                                    <form action="Control.user.php" method="POST" id="pictureUpload" enctype="multipart/form-data"></form>
+                                    <input type="text" name="method" form="pictureUpload" value="PUT" hidden>
+                                    <img class="img-fluid img-circle" src="../uploads/images/users/0.057052001555682879.JPG" alt="Image">
+                                    <button class="btn btn-info col-md-12" onclick="$('#picture').click()">آپلود تصویر کاربری</button>
+                                    <button type="text" form="pictureUpload" class="col-md-12 btn btn-success">اعمال تصویر</button>
+                                    <input accept="image/jpeg,image/bmp,image/jpg,image/png" form="pictureUpload" type="file" id="picture" name="picture" style="display:none" required>
+                                </div>
+                                <div class="d-box col-lg-10 col-md-10 col-sm-6 col-xs-12" style="text-align:right">
+                                    <div class="content-box">
+                                        <form action="Control.user.php" method="POST" id="settingform"></form>
+                                        <input class="col-md-6 form-control" type="text" value="مجتبی" name="name" form="settingform" placeholder="نام">
+                                        <input class="col-md-6 form-control" type="text" value="ملک فر" name="family" form="settingform" placeholder="نام خانوادگی">
+                                        <input class="col-md-9 form-control" type="text" value="طراح و برنامه نویس وبسایت." name="bio" form="settingform" placeholder="بیوگرافی">
+                                        <input class="col-md-3 form-control" type="text" value="www.malekfar.ir" name="website" form="settingform"  placeholder="آدرس وبسایت">
+                                        <input class="col-md-4 form-control" type="text" value="malekfar" name="username" form="settingform"  placeholder="نام کاربری">
+                                        <input class="col-md-4 form-control" type="text" value="09158583483" name="phone" form="settingform"  placeholder="نام کاربری">
+                                        <select class="col-md-4 form-control"  name="account_type" form="settingform">
+                                            <option value="public" >عمومی</option>
+                                            <option value="private" selected>خصوصی</option>
+                                        </select>
+                                        <button type="text" form="settingform" class="col-md-12 btn btn-success">اعمال تغیرات</button>
+                                    </div>
+                                    <!--/ media -->
+                                </div>
+                            </div>
+                            <!--/ details-box -->
+                        </div>
+                    </div>
+                </div>
+                <!--/ container -->
+            </section>
+            <!--/ profile -->
+
+            <!-- ==============================================
+            User Profile Section
+            =============================================== -->
+            <section class="details">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="details-box row">
+                                <div class="d-box col-lg-12 col-md-12 col-sm-6 col-xs-12" style="text-align:right">
+                                    <div class="content-box">
+                                        <form action="Control.user.php" method="POST" enctype="multipart/form-data"></form>
+                                        <input  class="col-md-6 form-control" type="text" name="name" placeholder="رمز جدید">
+                                        <input  class="col-md-6 form-control" type="text" name="family" placeholder="تکرار رمز جدید">
+                                        <button type="text"  class="col-md-12 btn btn-success">تغییر رمز عبور</button>
+                                    </div>
+                                    <!--/ media -->
+                                </div>
+                            </div>
+                            <!--/ details-box -->
+                        </div>
+                    </div>
+                </div>
+                <!--/ container -->
+            </section>
+            <!--/ profile -->
+        </div>
+        <!--/ container -->
+    </section>
+    <!--/ newsfeed -->
+
+    <!-- ==============================================
+	 Scripts
+	 =============================================== -->
+    <script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/plugins/slimscroll/jquery.slimscroll.js"></script>
+<script src="../assets/plugins/carousel/js/owl.carousel.js"></script>
+<script src="../assets/js/base.js"></script>
+<script>
+    $('#Slim,#Slim2').slimScroll({
+        height: "auto",
+        position: 'right',
+        railVisible: true,
+        alwaysVisible: true,
+        size: "8px",
+    });
+    $(document).ready( () => {
+        var pageName = "setting.php";
+        $(".nav-sec .d-flex .p-2 a[href='"+pageName+"']").parent().addClass("mint-green");
+    });
+</script>    <script>
+        $(document).on('change', '#picture', function () {
+            if (!this.files[0])
+                return false;
+            var file = this.files[0];
+            var imagefile = file.type;
+            var match = $(this).attr('accept').split(",");
+            if(!((imagefile==match[0])||(imagefile==match[1])||(imagefile==match[2]))) {
+                alert("لطفا فایل را از فرمت های معرفی شده انتخاب کنید");
+                $("#picture").remove();
+                $('.up-picture').append(`<input accept="image/jpeg,image/bmp,image/jpg,image/png" form="pictureUpload" type="file" id="picture" name="picture" style="display:none" required>`);
+            } else {
+                var reader = new FileReader();
+                reader.onload = imageIsLoaded;
+                reader.readAsDataURL(file);
+            }
+            
+            function imageIsLoaded(e)
+            {
+                var images = $(".img-fluid");
+                images.attr('src', e.target.result);
+            }
+        })
+    </script>
+</body>
+</html>
