@@ -4,7 +4,7 @@ namespace Models;
 
 class User extends Model
 {
-    public function fullName()
+    public function fullName(): string
     {
         return "$this->name $this->family";
     }
@@ -21,17 +21,38 @@ class User extends Model
 
     public function followersCount()
     {
-        return \Models\Follower::where(['followed_id', '=', $this->id])->count();
+        return Follower::where(['followed_id', '=', $this->id])->where(['accept', '=', '1'])->count();
     }
 
-    public function followingCount()
+    public function toggleFollow($userId): bool|int
     {
-        return \Models\Follower::where(['user_id', '=', $this->id])->count();
+        $followStatus = $this->isFollowedBy($userId);
+
+        $acceptStatus = $this?->account_type == 'private' ? 0 : 1;
+
+        if (empty($followStatus)) {
+            Follower::create(['followed_id' => $this->id, 'user_id' => $userId, 'accept' => $acceptStatus]);
+            return $acceptStatus;
+        }
+
+        Follower::where(['followed_id', '=', $this->id])->where(['user_id', '=', $userId])->remove();
+
+        return -1;
+    }
+
+    public function isFollowedBy($userId)
+    {
+        return Follower::where(['followed_id', '=', $this->id])->where(['user_id', '=', $userId])->first();
+    }
+
+    public function followingCount(): int
+    {
+        return Follower::where(['user_id', '=', $this->id])->where(['accept', '=', '1'])->count();
     }
 
     public function suggestionsUser(): array
     {
-        $suggestions = \Models\Follower::query("
+        $suggestions = Follower::query("
         SELECT DISTINCT fOf.followed_id
         FROM followers
         JOIN followers fOf ON followers.followed_id = fOf.user_id
@@ -40,7 +61,7 @@ class User extends Model
             AND fOf.followed_id NOT IN (
                 SELECT followed_id
                 FROM followers
-                WHERE user_id = {$this->id}
+                WHERE user_id = {$this->id} AND accept = 1
             )
         GROUP BY fOf.followed_id
     ");
