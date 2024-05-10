@@ -55,7 +55,7 @@ $user = \Models\User::where(['id', '=', $loggedInUserId])->first();
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><i class="fab fa-instagram"></i> </a>
+                    <a class="navbar-brand" href="index.php"><i class="fab fa-instagram"></i> </a>
                 </div>
                 <!-- /.navbar-header -->
                 <div class="navbar-left" style="display:none">
@@ -233,9 +233,8 @@ $user = \Models\User::where(['id', '=', $loggedInUserId])->first();
 
                         <li class="dropdown mega-avatar">
                             <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"
-                                href="./profile.html">
-                                <span class="avatar w-32"><img src="view/uploads/images/users/0.057052001555682879.JPG"
-                                        class="img-resonsive img-circle" width="25" height="25" alt="..."></span>
+                                href="./profile.php">
+                                <span class="avatar w-32"><img src="<?= $user->picture ?>" class="img-resonsive img-circle" width="25" height="25" alt="..."></span>
                                 <!-- hidden-xs hides the username on small devices so only the image appears. -->
                                 <span class="hidden-xs"> <?= $user->fullName() ?> </span>
                             </a>
@@ -368,10 +367,10 @@ $user = \Models\User::where(['id', '=', $loggedInUserId])->first();
                                     ?>
                                     <div class="suggestion-body">
                                         <img class="img-responsive img-circle"
-                                            src="<?= $suggestionUser->user()->picture ?>" alt="">
+                                            src="<?= $suggestionUser->user->picture ?>">
                                         <div class="name-box">
-                                            <h4><?= $suggestionUser->user()->fullName() ?></h4>
-                                            <span>@<?= $suggestionUser->user()->username ?></span>
+                                            <h4><?= $suggestionUser->user->fullName() ?></h4>
+                                            <span>@<?= $suggestionUser->user->username ?></span>
                                         </div>
                                         <span><i class="fa fa-plus"></i></span>
                                     </div>

@@ -39,7 +39,7 @@ class Model
         return $database->create($array);
     }
 
-    public static function qeury($query)
+    public static function query($query)
     {
         $database = self::getDatabaseInstance();
         return $database->query($query);

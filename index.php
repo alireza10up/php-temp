@@ -5,6 +5,8 @@ require "./config/config.php";
 $posts = \Models\Post::all()->get();
 
 $loggedInUserId = 3;
+
+$userData = \Models\User::where(['id' , '=' , $loggedInUserId])->first();
 ?>
 
 
@@ -236,7 +238,7 @@ $loggedInUserId = 3;
                                                            class="img-resonsive img-circle" width="25" height="25"
                                                            alt="..."></span>
                             <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                            <span class="hidden-xs">مجتبی ملک فر</span>
+                            <span class="hidden-xs"><?= $userData->fullName() ?></span>
                         </a>
                         <div class="dropdown-menu w dropdown-menu-scale pull-right">
                             <a class="dropdown-item" href="setting"><span>تنظیمات</span></a>
@@ -334,7 +336,7 @@ $loggedInUserId = 3;
                                 </a>
                                 <div class="d-flex mr-3">
                                     <a href="return false"><img class="img-responsive img-circle"
-                                                                src="<?= $post->user->picture ?>" alt="User"></a>
+                                                                src="<?= $post->user->picture ?? '/view/img/no-image.png' ?>" alt="User"></a>
                                 </div>
                             </div>
                             <!--/ media -->
@@ -343,7 +345,7 @@ $loggedInUserId = 3;
 
                         <div class="cardbox-item">
                             <a href="" data-toggle="modal">
-                                <img class="img-responsive filter-charmes" src="<?= $post->file ?>" alt="MaterialImg">
+                                <img class="img-responsive filter-charmes" src="<?= $post->file ?? '/view/img/image.png' ?>" alt="MaterialImg">
                             </a>
                         </div>
                         <!--/ cardbox-item -->

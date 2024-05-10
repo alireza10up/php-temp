@@ -29,14 +29,17 @@ class User extends Model
         return \Models\Follower::where(['user_id', '=', $this->id])->count();
     }
 
-    public function suggestionsUser()
+    public function suggestionsUser(): array
     {
-        return \Models\Follower::qeury("
-        SELECT fOf.followed_id FROM followers
-        JOIN followers fOf On followers.followed_id = fOf.user_id 
+        $suggestions = \Models\Follower::query("
+        SELECT DISTINCT fOf.followed_id
+        FROM followers
+        JOIN followers fOf ON followers.followed_id = fOf.user_id
         WHERE followers.user_id = {$this->id}
-        AND
-        fOf.followed_id != {$this->id} 
-        ");
+            AND fOf.followed_id != {$this->id}
+        GROUP BY fOf.followed_id
+         ");
+
+        return $suggestions;
     }
 }
