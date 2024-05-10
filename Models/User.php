@@ -37,8 +37,13 @@ class User extends Model
         JOIN followers fOf ON followers.followed_id = fOf.user_id
         WHERE followers.user_id = {$this->id}
             AND fOf.followed_id != {$this->id}
+            AND fOf.followed_id NOT IN (
+                SELECT followed_id
+                FROM followers
+                WHERE user_id = {$this->id}
+            )
         GROUP BY fOf.followed_id
-         ");
+    ");
 
         return $suggestions;
     }
