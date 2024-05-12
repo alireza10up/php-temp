@@ -1,21 +1,33 @@
 <?php
 
-require __DIR__."/database.php";
+/**
+ * errors
+ */
+ 
+ ini_set('display_errors', 1);
+ ini_set('display_startup_errors', 1);
+ error_reporting(E_ALL);
 
-function dd(...$data)
+/**
+ * constant
+ */
+
+define("BASE_PATH",dirname(__DIR__));
+
+/**
+ * basic include func
+ */
+
+function inc(string $path)
 {
-    var_dump($data);
-    die;
-}
+    $fullPath = BASE_PATH . DIRECTORY_SEPARATOR . $path . ".php";
+    include str_replace('\\' , '/' , $fullPath);
+} 
 
-function dump(...$data) 
-{
-    var_dump($data);
-}
+/**
+ * load utils
+ */
 
-spl_autoload_register(function ($class_name) {
-    $class_file = dirname(__DIR__) . DIRECTORY_SEPARATOR . $class_name . '.php';
-    $class_file = str_replace('\\' , '/' , $class_file);
-    if (!file_exists($class_file) or !is_readable($class_file)) die($class_name . ' Error To Inc');
-    include $class_file;
-});
+inc('config/autoload');
+inc('config/database');
+inc('config/helpers');
