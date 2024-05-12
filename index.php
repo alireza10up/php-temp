@@ -2,11 +2,11 @@
 
 require "./config/config.php";
 
-$posts = \Models\Post::all()->get();
-
 $loggedInUserId = 3;
 
 $userData = \Models\User::where(['id' , '=' , $loggedInUserId])->first();
+
+$posts = $userData->getPostsFollowing();
 ?>
 
 
@@ -310,7 +310,7 @@ $userData = \Models\User::where(['id' , '=' , $loggedInUserId])->first();
             </div>
             <!--/ col-lg-3 -->
             <div class="col-lg-6">
-                <?php foreach ($posts as $post) { ?>
+                <?php foreach ($posts as $post) :?>
                     <div class="cardbox">
                         <div class="cardbox-heading">
                             <!-- START dropdown-->
@@ -370,7 +370,7 @@ $userData = \Models\User::where(['id' , '=' , $loggedInUserId])->first();
                         </div>
                         <!--/ cardbox-like -->
                     </div>
-                <?php } ?>
+                <?php endforeach; ?>
             </div>
             <!--/ col-lg-6 -->
 

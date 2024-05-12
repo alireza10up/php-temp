@@ -282,7 +282,7 @@ $user = \Models\User::where(['id', '=', $loggedInUserId])->first();
             </a>
         </div>
         <div class="p-2 nav-icon-lg dark-black">
-            <a class="nav-icon" href='profile.php?username=malekfar'><em class="fa fa-user"></em>
+            <a class="nav-icon" href='profile.php'><em class="fa fa-user"></em>
                 <span>پروفایل</span>
             </a>
         </div>
@@ -328,7 +328,7 @@ $user = \Models\User::where(['id', '=', $loggedInUserId])->first();
                             <br/>
                             <small class="text-muted"><?= $user->followersCount() ?> دنبال کننده</small>
                             <br/>
-                            <small class="text-muted"><?= $user->followingCount() ?> دنبال شونده </small>
+                            <small class="text-muted"><?= $user->followingsCount() ?> دنبال شونده </small>
                             <hr>
                             <small class="text-muted" style="float: right;">بیوگرافی: </small>
                             <p style=""><?= $user->bio ?></p>

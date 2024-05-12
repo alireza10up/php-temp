@@ -45,9 +45,18 @@ class User extends Model
         return Follower::where(['followed_id', '=', $this->id])->where(['user_id', '=', $userId])->first();
     }
 
-    public function followingCount(): int
+    public function followings() {
+       return Follower::where(['user_id', '=', $this->id])->where(['accept' , '=' , 1]);
+    }
+
+    public function followingsCount(): int
     {
-        return Follower::where(['user_id', '=', $this->id])->where(['accept', '=', '1'])->count();
+        return $this->followings()->count();
+    }
+
+    public function getFollowings()
+    {
+        return $this->followings()->get();
     }
 
     public function suggestionsUser(): array
@@ -67,5 +76,17 @@ class User extends Model
     ");
 
         return $suggestions;
+    }
+
+    public function getPostsFollowing()
+    {
+        $posts=[];
+
+        // get following posts
+        foreach ($this->getFollowings() as $following) {
+            $posts = array_merge($posts, \Models\Post::where(['user_id', '=', $following->followed_id])->get());
+        }
+
+        return $posts;
     }
 }
