@@ -8,7 +8,14 @@ function dd(...$data)
     die;
 }
 
-spl_autoload_register(function ($class) {
-    require __DIR__."/../$class.php";
-});
+function dump(...$data) 
+{
+    var_dump($data);
+}
 
+spl_autoload_register(function ($class_name) {
+    $class_file = dirname(__DIR__) . DIRECTORY_SEPARATOR . $class_name . '.php';
+    $class_file = str_replace('\\' , '/' , $class_file);
+    if (!file_exists($class_file) or !is_readable($class_file)) die($class_name . ' Error To Inc');
+    include $class_file;
+});

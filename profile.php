@@ -382,7 +382,7 @@ $user = \Models\User::where(['id', '=', $loggedInUserId])->first();
                                           onclick="toggleFollow(`<?= $suggestionUser->user->id ?>`)">
                                             <?php $followStatus = $suggestionUser->user->isFollowedBy($loggedInUserId);
                                             echo match ($followStatus->accept ?? -1) {
-                                                '0' => 'ارسال شد',
+                                                0 ,'0' , false => 'ارسال شد',
                                                 default => 'دنبال کردن'
                                             };
                                             ?>
