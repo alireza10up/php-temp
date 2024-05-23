@@ -48,5 +48,5 @@ try {
     $message = 'با موفقیت ثبت نام شده اید وارد شوید';
     redirect('../login.php?messages=' . $message);
 } catch (Exception $exception) {
-    redirect('../login.php?messages=' . $exception->getMessage());
+    redirect('../register.php?messages=' . $exception->getMessage());
 }

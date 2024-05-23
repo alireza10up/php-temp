@@ -8,7 +8,7 @@ if (!$loggedInUserId) {
     redirect('login.php');
 }
 
-$user = \Models\User::where(['id', '=', $loggedInUserId])->first();
+$userData = \Models\User::where(['id', '=', $loggedInUserId])->first();
 
 $title = 'پروفایل کاربری';
 ?>
@@ -50,14 +50,14 @@ inc('view/navbar');
                             <div class="user-info">
                                 <div class="image">
                                     <a href="photo_profile_two.html">
-                                        <img src="<?= $user->picture ?>" class="img-responsive img-circle"
+                                        <img src="<?= $userData->picture ?>" class="img-responsive img-circle"
                                              alt="User" style="height: 180px;">
                                         <span class="online-status online"></span>
                                     </a>
                                 </div>
                                 <div class="detail">
-                                    <h4> <?= $user->fullName() ?> </h4>
-                                    <small><?= $user->username ?></small>
+                                    <h4> <?= $userData->fullName() ?> </h4>
+                                    <small><?= $userData->username ?></small>
                                 </div>
                                 <div class="row">
                                     <div class="col-12">
@@ -72,17 +72,17 @@ inc('view/navbar');
                             </div>
                         </li>
                         <li>
-                            <small class="text-muted"><?= $user->postsCount() ?> پست </small>
+                            <small class="text-muted"><?= $userData->postsCount() ?> پست </small>
                             <br/>
-                            <small class="text-muted"><?= $user->followersCount() ?> دنبال کننده</small>
+                            <small class="text-muted"><?= $userData->followersCount() ?> دنبال کننده</small>
                             <br/>
-                            <small class="text-muted"><?= $user->followingsCount() ?> دنبال شونده </small>
+                            <small class="text-muted"><?= $userData->followingsCount() ?> دنبال شونده </small>
                             <hr>
                             <small class="text-muted" style="float: right;">بیوگرافی: </small>
-                            <p style=""><?= $user->bio ?></p>
+                            <p style=""><?= $userData->bio ?></p>
                             <hr>
                             <small class="text-muted" style="float: right;">وبسایت: </small>
-                            <p style=""> <?= $user->website ?> </p>
+                            <p style=""> <?= $userData->website ?> </p>
                             <hr>
                         </li>
                     </ul>
@@ -92,7 +92,7 @@ inc('view/navbar');
             <!--/ col-lg-3-->
             <div class="col-lg-6" style="padding-top: 22px;background: #fff;">
                 <div class="row">
-                    <?php foreach ($user->posts()->get() as $post): ?>
+                    <?php foreach ($userData->posts()->get() as $post): ?>
                         <div class="col-lg-6">
                             <a class="modalClass" post-id="16" style="cursor:pointer">
 
@@ -115,7 +115,7 @@ inc('view/navbar');
                 <div class="suggestion-box full-width">
                     <div class="suggestions-list">
                         <?php
-                        $suggestionsUser = $user->suggestionsUser();
+                        $suggestionsUser = $userData->suggestionsUser();
                         if ($suggestionsUser):
                             foreach ($suggestionsUser as $suggestionUser):
                                 ?>

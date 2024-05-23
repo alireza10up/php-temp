@@ -4,6 +4,11 @@ namespace Models;
 
 class User extends Model
 {
+    public function getId()
+    {
+        return $this->id;
+    }
+
     public function fullName(): string
     {
         return "$this->name $this->family";
@@ -45,8 +50,9 @@ class User extends Model
         return Follower::where(['followed_id', '=', $this->id])->where(['user_id', '=', $userId])->first();
     }
 
-    public function followings() {
-       return Follower::where(['user_id', '=', $this->id])->where(['accept' , '=' , 1]);
+    public function followings()
+    {
+        return Follower::where(['user_id', '=', $this->id])->where(['accept', '=', 1]);
     }
 
     public function followingsCount(): int
@@ -80,7 +86,7 @@ class User extends Model
 
     public function getPostsFollowing(): array
     {
-        $posts=[];
+        $posts = [];
 
         // get following posts
         foreach ($this->getFollowings() as $following) {

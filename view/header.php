@@ -1,3 +1,6 @@
+<?php
+global $userData;
+?>
 <header class="tr-header">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
