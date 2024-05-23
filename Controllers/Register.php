@@ -12,3 +12,5 @@ if (
     $errors = 'لطفا فیلدی را خالی نگذارید';
     redirect('../register.php?messages=' . $errors);
 }
+
+dd($_POST);

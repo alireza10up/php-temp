@@ -19,7 +19,7 @@ inc('view/head');
 <section class="login">
     <div class="container">
         <div class="banner-content">
-            <h1><i class="fa fa-smile"></i> P-Instagram</h1>
+            <h1><i class="fa fa-smile"></i> شبکه اجتماعی x </h1>
             <form method="post" class="form-signin" action="Controllers/Login.php">
 
                 <h3 class="form-signin-heading">لطفا وارد شوید</h3>
@@ -32,8 +32,7 @@ inc('view/head');
                 <button class="kafe-btn kafe-btn-mint btn-block" type="submit">ورود</button>
                 <br/>
                 <a class="btn btn-dark " href="register.php" role="button">برای اولین بار وارد میشوید؟ ثبت نام کنید</a>
-                <a class="btn btn-dark " onclick="alert('coming soon')" role="button">رمز عبور خود را فراموش کرده
-                    اید؟</a>
+                <a class="btn btn-dark " onclick="alert('coming soon')" role="button">رمز عبور خود را فراموش کرده اید؟</a>
             </form>
         </div>
         <!--/. banner-content -->
