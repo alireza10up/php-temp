@@ -199,7 +199,7 @@ global $userData;
                         </a>
                         <div class="dropdown-menu w dropdown-menu-scale pull-right">
                             <a class="dropdown-item" href="setting"><span>تنظیمات</span></a>
-                            <a class="dropdown-item" href="Control.logout.php"><span>خروج</span></a>
+                            <a class="dropdown-item" href="Controllers/Logout.php"><span>خروج</span></a>
                         </div>
                     </li>
                     <!-- /navbar-item -->
