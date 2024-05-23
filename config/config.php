@@ -37,3 +37,11 @@ session_start();
 inc('config/autoload');
 inc('config/database');
 inc('config/helpers');
+
+/**
+ * messages handle
+ */
+
+if(isset($_GET['messages'])) {
+    echo "<script>alert(`{$_GET['messages']}`)</script>";
+}
