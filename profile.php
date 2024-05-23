@@ -2,7 +2,7 @@
 
 require "./config/config.php";
 
-$loggedInUserId = 3;
+$loggedInUserId = getUserLoginId();
 
 if (!$loggedInUserId) {
     redirect('login.php');

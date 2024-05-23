@@ -78,7 +78,7 @@ class User extends Model
         return $suggestions;
     }
 
-    public function getPostsFollowing()
+    public function getPostsFollowing(): array
     {
         $posts=[];
 

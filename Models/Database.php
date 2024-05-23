@@ -87,11 +87,10 @@ class Database
         $number = 0;
         foreach ($array as $key => $value) {
             $number++;
-            $sql = $sql . "$key=$value";
+            $sql = $sql . "$key='$value'";
             if ($number < count($array))
                 $sql = $sql . ", ";
         }
-
         return $this->connection->prepare($sql)->execute();
     }
 
