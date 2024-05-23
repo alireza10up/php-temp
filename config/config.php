@@ -18,11 +18,17 @@ define("BASE_PATH",dirname(__DIR__));
  * basic include func
  */
 
-function inc(string $path)
+function inc(string $path): void
 {
     $fullPath = BASE_PATH . DIRECTORY_SEPARATOR . $path . ".php";
     include str_replace('\\' , '/' , $fullPath);
-} 
+}
+
+/**
+ * sessions
+ */
+
+session_start();
 
 /**
  * load utils

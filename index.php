@@ -2,288 +2,40 @@
 
 require "./config/config.php";
 
-$loggedInUserId = 3;
+$loggedInUserId = getUserLoginId();
 
-$userData = \Models\User::where(['id' , '=' , $loggedInUserId])->first();
+if (!$loggedInUserId) {
+    redirect('login.php');
+}
+
+$userData = \Models\User::where(['id', '=', $loggedInUserId])->first();
 
 $posts = $userData->getPostsFollowing();
-?>
 
+$title = 'شبکه اجتماعی x';
+?>
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-
-    <!-- ==============================================
-        Title and Meta Tags
-        =============================================== -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شبکه اجتماعی</title>
-    <meta name="description" content=""/>
-    <meta name="keywords" content=""/>
-    <meta property="og:title" content=""/>
-    <meta property="og:url" content=""/>
-    <meta property="og:description" content=""/>
-
-    <!-- ==============================================
-        Favicons
-        =============================================== -->
-    <link rel="icon" href="view/assets/img/logo.html">
-    <link rel="apple-touch-icon" href="view/img/favicons/apple-touch-icon.html">
-    <link rel="apple-touch-icon" sizes="72x72" href="view/img/favicons/apple-touch-icon-72x72.html">
-    <link rel="apple-touch-icon" sizes="114x114" href="view/img/favicons/apple-touch-icon-114x114.html">
-
-    <!-- ==============================================
-        CSS
-        =============================================== -->
-    <link type="text/css" href="view/assets/css/demos/photo.css" rel="stylesheet"/>
-</head>
+<?php
+inc('view/head');
+?>
 <body>
 <!-- ==============================================
  Navigation Section
  =============================================== -->
-<header class="tr-header">
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html"><i class="fab fa-instagram"></i> </a>
-            </div>
-            <!-- /.navbar-header -->
-            <div class="navbar-left" style="display:none">
-                <div class="collapse navbar-collapse" id="navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a><span>تنظیمات</span></a></li>
-                        <li><a href="Control.logout.php">خروج</a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- /.navbar-left -->
-            <div class="navbar-right">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <div class="search-dashboard">
-                            <form method="GET" action="Control.search.php">
-                                <input name="text" placeholder="جستجو کنید" type="text">
-                                <button type="submit"><i class="fa fa-search"></i></button>
-                            </form>
-                        </div>
-                    </li>
-
-                    <li class="dropdown notification-list">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="false"
-                           aria-expanded="false">
-                            <span class="badge badge-danger badge-pill noti-icon-badge">6</span>
-                            <i class="fa fa-bell noti-icon"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-lg">
-
-                            <div class="dropdown-item noti-title">
-                                <h6 class="m-0">
-                                    <span class="pull-right">
-                                        <a class="text-dark"><small> پاک کردن  </small></a>
-                                    </span> اعلان ها
-                                </h6>
-                            </div>
-
-                            <div class="slimScrollDiv"
-                                 style="position: relative; overflow: hidden; width: auto; height: 416.983px;">
-                                <div class="slimscroll"
-                                     style="max-height: 230px; overflow: hidden; width: auto; height: 416.983px;">
-                                    <div id="Slim">
-                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                            <div class="notify-icon" style="background-color:red"><i
-                                                        class="fa fa-heart"></i></div>
-                                            <p class="notify-details">مجتبی ملک فر پست شما را لایک کرد. <small
-                                                        class="text-muted">1 دقیقه قبل</small></p>
-                                        </a>
-                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                            <div class="notify-icon" style="background-color:red"><i
-                                                        class="fa fa-heart"></i></div>
-                                            <p class="notify-details">مجتبی ملک فر پست شما را لایک کرد. <small
-                                                        class="text-muted">57 دقیقه قبل</small></p>
-                                        </a>
-                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                            <div class="notify-icon" style="background-color:red"><i
-                                                        class="fa fa-heart"></i></div>
-                                            <p class="notify-details">مجتبی ملک فر پست شما را لایک کرد. <small
-                                                        class="text-muted">55 دقیقه قبل</small></p>
-                                        </a>
-                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                            <div class="notify-icon" style="background-color:red"><i
-                                                        class="fa fa-heart"></i></div>
-                                            <p class="notify-details">مجتبی ملک فر پست شما را لایک کرد. <small
-                                                        class="text-muted">54 دقیقه قبل</small></p>
-                                        </a>
-                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                            <div class="notify-icon" style="background-color:red"><i
-                                                        class="fa fa-heart"></i></div>
-                                            <p class="notify-details">مجتبی ملک فر پست شما را لایک کرد. <small
-                                                        class="text-muted">54 دقیقه قبل</small></p>
-                                        </a>
-                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                            <div class="notify-icon" style="background-color:red"><i
-                                                        class="fa fa-comment"></i></div>
-                                            <p class="notify-details">مجتبی ملک فر برای پست شما کامنت نوشت. <small
-                                                        class="text-muted">24 دقیقه قبل</small></p>
-                                        </a>
-                                    </div>
-                                    <!--/ .Slim-->
-                                    <div class="slimScrollBar"
-                                         style="background: rgb(158, 165, 171) none repeat scroll 0% 0%; width: 8px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px;"></div>
-                                    <div class="slimScrollRail"
-                                         style="width: 8px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51) none repeat scroll 0% 0%; opacity: 0.2; z-index: 90; right: 1px;"></div>
-                                </div>
-                                <!--/ .slimscroll-->
-                            </div>
-                            <!--/ .slimScrollDiv-->
-                            <a href="notification" class="dropdown-item text-center notify-all">
-                                نمایش همه<i class="fa fa-arrow-left"></i>
-                            </a>
-                            <!-- All-->
-                        </div>
-                        <!--/ dropdown-menu-->
-                    </li>
-
-                    <li class="dropdown notification-list">
-                        <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" role="button"
-                           aria-haspopup="false" aria-expanded="false">
-                            <span class="badge badge-success badge-pill noti-icon-badge">6</span>
-                            <i class="fa fa-envelope noti-icon"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-lg dropdown-new">
-                            <div class="dropdown-item noti-title">
-                                <h6 class="m-0">
-                                <span class="float-right">
-                                    <a class="text-dark"><small> پاک کردن </small></a>
-                                </span>گفتگوها
-                                </h6>
-                            </div>
-
-                            <div class="slimScrollDiv"
-                                 style="position: relative; overflow: hidden; width: auto; height: 416.983px;">
-                                <div class="slimscroll"
-                                     style="max-height: 230px; overflow: hidden; width: auto; height: 416.983px;">
-                                    <div id="Slim2">
-                                        <a href="javascript:void(0);" class="dropdown-item notify-item nav-user">
-                                            <div class="notify-icon"><img src="view/assets/img/users/1.jpg"
-                                                                          class="img-responsive img-circle" alt="">
-                                            </div>
-                                            <p class="notify-details">Cristina Pride</p>
-                                            <p class="text-muted font-13 mb-0 user-msg">Hi, How are you? What about our
-                                                next meeting</p>
-                                        </a>
-                                        <!--/ dropdown-item-->
-                                        <a href="javascript:void(0);" class="dropdown-item notify-item nav-user">
-                                            <div class="notify-icon"><img src="view/assets/img/users/2.jpg"
-                                                                          class="img-responsive img-circle" alt="">
-                                            </div>
-                                            <p class="notify-details">Sam Garret</p>
-                                            <p class="text-muted font-13 mb-0 user-msg">Yeah everything is fine</p>
-                                        </a>
-                                        <!--/ dropdown-item-->
-                                        <a href="javascript:void(0);" class="dropdown-item notify-item nav-user">
-                                            <div class="notify-icon"><img src="view/assets/img/users/3.jpg"
-                                                                          class="img-responsive img-circle" alt="">
-                                            </div>
-                                            <p class="notify-details">Karen Robinson</p>
-                                            <p class="text-muted font-13 mb-0 user-msg">Wow that's great</p>
-                                        </a>
-                                        <!--/ dropdown-item-->
-                                        <a href="javascript:void(0);" class="dropdown-item notify-item nav-user">
-                                            <div class="notify-icon"><img src="view/assets/img/users/4.jpg"
-                                                                          class="img-responsive img-circle" alt="">
-                                            </div>
-                                            <p class="notify-details">Sherry Marshall</p>
-                                            <p class="text-muted font-13 mb-0 user-msg">Hi, How are you? What about our
-                                                next meeting</p>
-                                        </a>
-                                        <!--/ dropdown-item-->
-                                        <a href="javascript:void(0);" class="dropdown-item notify-item nav-user">
-                                            <div class="notify-icon"><img src="view/assets/img/users/5.jpg"
-                                                                          class="img-responsive img-circle" alt="">
-                                            </div>
-                                            <p class="notify-details">Shawn Millard</p>
-                                            <p class="text-muted font-13 mb-0 user-msg">Yeah everything is fine</p>
-                                        </a>
-                                        <!--/ dropdown-item-->
-                                    </div>
-                                    <!--/ .Slim-->
-                                    <div class="slimScrollBar"
-                                         style="background: rgb(158, 165, 171) none repeat scroll 0% 0%; width: 8px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px;"></div>
-                                    <div class="slimScrollRail"
-                                         style="width: 8px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51) none repeat scroll 0% 0%; opacity: 0.2; z-index: 90; right: 1px;"></div>
-                                </div>
-                                <!--/ slimscroll-->
-                            </div>
-                            <!--/ slimScrollDiv-->
-                            <a href="photo_chat.html" class="dropdown-item text-center notify-all">
-                                نمایش همه<i class="fa fa-arrow-left"></i>
-                            </a>
-                        </div>
-                        <!--/ dropdown-menu-->
-                    </li>
-
-                    <li class="dropdown mega-avatar">
-                        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" href="./profile.php">
-                            <span class="avatar w-32"><img src="view/uploads/images/users/0.057052001555682879.JPG"
-                                                           class="img-resonsive img-circle" width="25" height="25"
-                                                           alt="..."></span>
-                            <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                            <span class="hidden-xs"><?= $userData->fullName() ?></span>
-                        </a>
-                        <div class="dropdown-menu w dropdown-menu-scale pull-right">
-                            <a class="dropdown-item" href="setting"><span>تنظیمات</span></a>
-                            <a class="dropdown-item" href="Control.logout.php"><span>خروج</span></a>
-                        </div>
-                    </li>
-                    <!-- /navbar-item -->
-
-                </ul>
-                <!-- /.sign-in -->
-            </div>
-            <!-- /.nav-right -->
-        </div>
-        <!-- /.container -->
-    </nav>
-    <!-- /.navbar -->
-</header>    <!-- Page Header -->
+<?php
+inc('view/header');
+?>
+<!-- Page Header -->
 
 <!-- ==============================================
  Navbar Second Section
  =============================================== -->
-<section class="nav-sec">
-    <div class="d-flex justify-content-between">
-        <div class="p-2 nav-icon-lg dark-black">
-            <a class="nav-icon" href='index.php'><em class="fa fa-align-left"></em>
-                <span>صفحه اصلی</span>
-            </a>
-        </div>
-        <div class="p-2 nav-icon-lg clean-black">
-            <a class="nav-icon" href='search.php'><em class="fa fa-crosshairs"></em>
-                <span>جستجو</span>
-            </a>
-        </div>
-        <div class="p-2 nav-icon-lg dark-black">
-            <a class="nav-icon" href='post.php'><em class="fab fa-instagram"></em>
-                <span>پست جدید</span>
-            </a>
-        </div>
-        <div class="p-2 nav-icon-lg dark-black">
-            <a class="nav-icon" href='profile.php?username=malekfar'><em class="fa fa-user"></em>
-                <span>پروفایل</span>
-            </a>
-        </div>
-    </div>
-</section>    <!-- ==============================================
+<?php
+inc('view/navbar');
+?>
+<!-- ==============================================
 	 News Feed Section
 	 =============================================== -->
 <section class="newsfeed">
@@ -310,7 +62,7 @@ $posts = $userData->getPostsFollowing();
             </div>
             <!--/ col-lg-3 -->
             <div class="col-lg-6">
-                <?php foreach ($posts as $post) :?>
+                <?php foreach ($posts as $post) : ?>
                     <div class="cardbox">
                         <div class="cardbox-heading">
                             <!-- START dropdown-->
@@ -336,7 +88,8 @@ $posts = $userData->getPostsFollowing();
                                 </a>
                                 <div class="d-flex mr-3">
                                     <a href="return false"><img class="img-responsive img-circle"
-                                                                src="<?= $post->user->picture ?? '/view/img/no-image.png' ?>" alt="User"></a>
+                                                                src="<?= $post->user->picture ?? '/view/img/no-image.png' ?>"
+                                                                alt="User"></a>
                                 </div>
                             </div>
                             <!--/ media -->
@@ -345,7 +98,8 @@ $posts = $userData->getPostsFollowing();
 
                         <div class="cardbox-item">
                             <a href="" data-toggle="modal">
-                                <img class="img-responsive filter-charmes" src="<?= $post->file ?? '/view/img/image.png' ?>" alt="MaterialImg">
+                                <img class="img-responsive filter-charmes"
+                                     src="<?= $post->file ?? '/view/img/image.png' ?>" alt="MaterialImg">
                             </a>
                         </div>
                         <!--/ cardbox-item -->
